@@ -5,9 +5,10 @@ var videoThumbs = new Array();   //サムネ
 $(function(){
   $("#GO").on("click",function(){
     $.ajax({
-      url: "http://www.nicovideo.jp/ranking/fav/hourly/all?rss=2.0",
+      url: "get_xml.php?url=" + "http://www.nicovideo.jp/ranking/fav/hourly/all?rss=2.0",
       dataType: "xml",
       success: function(xmlData){
+        console.log(xmlData);
         $(xmlData).find("item").each(
           function getTitles() {
             $(this).find("title").each(
@@ -34,6 +35,9 @@ $(function(){
             );
           }
         );
+      },
+      error: function(xhr, status, err){
+        console.log("Loading Error");
       }
     });
   });
