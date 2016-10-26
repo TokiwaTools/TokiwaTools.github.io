@@ -6,10 +6,10 @@ $(function(){
   $("#GO").on("click",function(){
     $.ajax({
       url: "get_xml.php?url=" + "http://www.nicovideo.jp/ranking/fav/hourly/all?rss=2.0",
-      dataType: "text",
-      success: function(xmlData){
-        console.log(xmlData);
-        $(xmlData).find("item").each(
+      dataType: "xml",
+      success: function(data){
+        console.log(data);
+        $(data).find("item").each(
           function getTitles() {
             $(this).find("title").each(
               function() {
