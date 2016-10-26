@@ -1,0 +1,150 @@
+@charset "UTF-8";
+
+body {
+  font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+  margin: 20px 0px;
+  line-height: 1.5em;
+}
+a {
+  text-decoration: none;
+}
+
+a:link, a:visited {
+  color: #2452c8;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  color: #007b43;
+  text-align: center;
+  padding: 0.8em 0em;
+  font-size: 2.5em;
+}
+
+h2 {
+  padding: 1.0em 0em;
+  color: #FFFFFF;
+  background: #5498e8;
+  text-align: center;
+  font-size: 2.5em;
+}
+
+h3 {
+  padding: 1.4em 0em;
+  color: #FFFFFF;
+  background: #f9803c;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.profile p {
+  background: rgba(84, 152, 232, 0.25);
+  padding: 1.5em 15%;
+  font-size: 1.3em;
+}
+
+.profile img {
+  display: block;
+  width: 25%;
+  margin: auto;
+}
+
+.profile .left {
+  text-align: left;
+}
+
+.profile .right {
+  text-align: right;
+}
+
+.explanation {
+  padding: 0em 1em;
+  margin: 2em 1em;
+  border-left: 3px solid #53a6f4;
+  font-weight: bold;
+}
+
+.tiles {
+  width: 80%;
+  margin: 3em auto;
+}
+
+.tiles .columns {
+  -webkit-column-count: 1;
+  -webkit-column-gap: 2.0em;
+  -webkit-column-fill: auto;
+  -moz-column-count: 1;
+  -moz-column-gap: 2.0em;
+  -moz-column-fill: auto;
+  column-count: 1;
+  column-gap: 2.0em;
+  column-fill: auto;
+}
+
+@media screen and (min-width: 900px) {
+  .tiles .columns {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+  }
+}
+
+@media screen and (min-width: 1350px) {
+  .tiles .columns {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+  }
+}
+
+.tiles .columns .cell {
+  display: inline-block;
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  column-break-inside: avoid;
+  vertical-align: top;
+  border: 1px solid #adadad;
+  border-radius: 10px;
+  margin: 1.0em 0em;
+  text-align: center;
+  padding: 0.8em 0em;
+}
+
+.tiles .columns .cell .day {
+  padding-left: 1em;
+  padding-bottom: 0.2em;
+  margin-right: 70%;
+  border-bottom: 1px solid #878787;
+  text-align: left;
+}
+
+.tiles .columns .cell .title {
+  font-size: 1.4em;
+  color: #2d90ed;
+  padding: 1em 1em;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 1em;
+  border-bottom: 1px solid #878787;
+}
+
+.tiles .columns .cell img {
+  width: 100%;
+  /*max-height: 500px;*/
+}
+
+.tiles .columns .cell .exp {
+  padding: 1.0em 1em;
+  font-size: 1.1em;
+}
+
+.tiles .columns .cell .lang {
+  text-align: right;
+  padding-right: 1em;
+  padding-top: 0.2em;
+  margin-left: 70%;
+  border-top: 1px solid #878787;
+}
