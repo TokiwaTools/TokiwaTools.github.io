@@ -5,7 +5,7 @@ var videoThumbs = new Array();   //サムネ
 $(function(){
   $("#GO").on("click",function(){
     $.ajax({
-      url: "get_xml.php?url=" + "https://www.google.co.jp",
+      url: "get_xml.php?url=" + "http://www.ekidata.jp/api/s/1130224.xml",
       dataType: "xml",
       success: function(xmlData){
         console.log(xmlData);
