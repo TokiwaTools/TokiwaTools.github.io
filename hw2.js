@@ -5,7 +5,7 @@ var videoThumbs = new Array();   //サムネ
 $(function(){
   $("#GO").on("click",function(){
     $.ajax({
-      url: "get_xml.php?url=" + "http://www.ekidata.jp/api/s/1130224.xml",
+      url: "get_xml.php?url=" + "http://www.nicovideo.jp/ranking/fav/hourly/all?rss=2.0",
       dataType: "xml",
       success: function(xmlData){
         console.log(xmlData);
